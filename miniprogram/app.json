@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/news/index",
+    "pages/news/detail",
+    "pages/news/detail2",
+    "pages/news/manage",
+    "pages/subscibe/index",
+    "pages/search/index",
+    "pages/search/index2",
+    "pages/user/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "电信集成展示厅",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#1296db"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/news/index",
+        "iconPath": "image/icon-news.png",
+        "selectedIconPath": "image/icon-news-a.png",
+        "text": "方案"
+      },
+      {
+        "pagePath": "pages/subscibe/index",
+        "iconPath": "image/icon-sub.png",
+        "selectedIconPath": "image/icon-sub-a.png",
+        "text": "案例"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "image/icon-user.png",
+        "selectedIconPath": "image/icon-user-a.png",
+        "text": "关于我们"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

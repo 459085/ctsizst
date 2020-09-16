@@ -1,0 +1,20 @@
+<!-- index.wxml -->
+
+<import src="../common/template/article.wxml"/>
+
+<view>
+  <view class='search'>
+            <input type='text' placeholder='搜索' confirm-type='search' bindinput='inputBind' bindconfirm='query' value='{{search}}'></input>
+            <image class="" src='/image/search.png' bindtap='query'></image>
+  </view>
+  <view class="container carts-list" wx:if="{{anList.length==0}}">
+  <image class="kong" src="/image/wufangan.jpg" mode="aspectFill" />
+  <view class="cla">暂无案例</view>
+</view>
+    <view class="articles">
+        <block wx:for="{{ anList }}" wx:key="id">
+            <template is="newsStyle1" data="{{ ...item }}" />
+        </block>
+    </view>
+
+</view>

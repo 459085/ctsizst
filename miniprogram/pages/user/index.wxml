@@ -1,0 +1,8 @@
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<!--index.wxml-->
+<view class="container">
+    <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+          <include src="../common/template/footer.wxml"/>
+</view>

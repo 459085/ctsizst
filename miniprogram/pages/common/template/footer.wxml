@@ -1,0 +1,7 @@
+<view class="weui-footer">
+    <view class="weui-footer__links">
+        <navigator url="" class="weui-footer__link">中国电信</navigator>
+        <navigator url="" class="weui-footer__link">软件服务部</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2018-2019 </view>
+</view>

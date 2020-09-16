@@ -1,0 +1,33 @@
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<import src="../common/template/article.wxml"/>
+
+<view class="page__detail">
+    <view class="detail">
+        <view class="detail__title">
+            {{ wenzhang.fam }}
+        </view>
+        <view class="article__desc">
+            <text class="article__time2">{{ wenzhang.desc }}</text>
+            <view class="article__count" style='margin-top:30rpx'>
+  <image class="article__icon" style='margin-right:16rpx' src="/image/icon-priaze.png"></image>
+                <button class="image" open-type='share'></button>
+                <image wx:if="{{ wenzhang.file_path }}" bindtap='cc' class="article__icon" style='width:36rpx;height:36rpx;' src="/image/xz.png"></image>
+                       <view wx:if="{{progress}}">({{progress}}) </view>
+            </view>
+        </view>
+    </view>
+    </view>
+        <view class="article__content wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+
+
+    <!-- 相关新闻 -->
+    <view class="detail__relation">
+        <view class="relation__title">相关案例</view>
+            <view class="articles">
+        <block wx:for="{{ anliList }}" wx:key="id">
+            <template is="newsStyle1" data="{{ ...item }}" />
+        </block>
+    </view>
+    </view>

@@ -1,0 +1,43 @@
+<!-- index.wxml -->
+
+<import src="../common/template/article.wxml"/>
+
+<view>
+  <view class='search'>
+            <input type='text' placeholder='搜索' confirm-type='search' bindinput='inputBind' bindconfirm='query' value='{{search}}'></input>
+            <image class="" src='/image/search.png' bindtap='query'></image>
+            
+  </view>
+    <!-- 头部导航 -->
+    <view class="header">
+        <scroll-view class="sv__container" scroll-x="true">
+            <block wx:for="{{categoryTabs}}" wx:key="lanmu_id" wx:if="{{ item.selected }}">
+                <view 
+                    class="sv__item {{ currentTab==item.lanmu_id ? 'active':'' }}" 
+                    bindtap="changeCategory" 
+                    data-id="{{ item.lanmu_order }}"
+                >
+                    {{ item.lanmu_name }}
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <!-- 滚动页面 -->
+    <swiper class="swiper__container" wx:if="{{ swiperList.length }}" indicator-dots="{{ false }}" autoplay="true" interval="3000">
+        <swiper-item wx:for="{{swiperList}}" wx:key="id">
+            <view class="swiper__content">
+                <image src="{{item.image}}"  class="swiper__item" mode="aspectFill"  />
+                <view class="swiper__desc">
+                    <text class="swiper__text">{{ item.title }}</text>
+                    <text class="swiper__id">[{{ index+1 }}/{{ swiperList.length }}]</text>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="articles">
+        <block wx:for="{{ fanganList }}" wx:key="id">
+            <template is="newsStyle2" data="{{ ...item }}" />
+        </block>
+    </view>
+
+</view>

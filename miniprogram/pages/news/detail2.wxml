@@ -1,0 +1,32 @@
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<import src="../common/template/article.wxml"/>
+
+<view class="page__detail">
+    <view class="detail">
+        <view class="detail__title">
+            {{ wenzhang.alm }}
+        </view>
+        <view class="article__desc">
+            <text class="article__time2">{{ wenzhang.desc }}</text>
+            <view class="article__count">
+                <image class="article__icon" src="/image/icon-priaze.png"></image>
+                <button class="image" open-type='share'></button>
+                <!-- <image class="article__icon" src="/image/shoucang.png"></image> -->
+            </view>
+        </view>
+</view>
+    </view>
+        <view class="article__content wxParse">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        </view>
+
+
+    <!-- 相关新闻 -->
+    <view class="detail__relation">
+        <view class="relation__title">相关方案</view>
+        <view class="articles">
+        <block wx:for="{{ fanganList }}" wx:key="id">
+            <template is="newsStyle2" data="{{ ...item }}" />
+        </block>
+    </view>
+    </view>

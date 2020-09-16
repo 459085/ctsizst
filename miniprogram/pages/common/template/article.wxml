@@ -1,0 +1,94 @@
+
+<!--无图模式-->
+<template name="newsStyle0">
+    <navigator url="/pages/news/detail?id={{ id }}&chid={{ chid }}&style={{ style }}&tag={{ tag }}">
+        <view class="article__item">
+            <view class="article__info">
+                <view class="article__title article__title__large">{{ 123 }}</view>
+                <view class="article__desc">
+                    <text class="article__source">{{123 }}</text>
+                    <text class="article__time">{{ 345 }}</text>
+                    <view class="article__count">
+                        <image class="article__icon" src="/image/icon-comt.png"></image>
+                        <text>{{ 1231 }}</text>
+                        <image class="article__icon" src="/image/icon-priaze.png"></image>
+                        <text>{{ 123 }}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </navigator>
+</template>
+
+<!--单大图模式-->
+<template name="newsStyle1">
+    <navigator url="/pages/news/detail2?id={{ _id }}&alh={{alh}}">
+    <view class="article__item article__item__cover">
+        <view class="article__cover">
+            <view class="article__title">{{ alm }}</view>
+            <image class="article__ad" mode="aspectFill" src="{{image_path}}"></image>
+        </view>
+        <view class="article__desc">
+            <text class="article__time">{{ desc }}</text>
+            <view class="article__count">
+                <image class="article__icon" src="/image/icon-comt.png"></image>
+                <text>{{ lll }}</text>
+                <image class="article__icon" src="/image/icon-priaze.png"></image>
+                <text>{{ fxl }}</text>
+            </view>
+        </view>
+    </view>
+    </navigator>
+</template>
+
+<!--普通模式-->
+<template name="newsStyle2">
+    <navigator url="/pages/news/detail?id={{ _id }}&fah={{fah}}">
+    <view class="article__item">
+        <view class="article__thumb">
+            <image class="article__image" src="{{image_path}}"></image>
+        </view>
+        <view class="article__info">
+            <view class="article__title article__title__large">{{ fam }}</view>
+            <!--<view class="article__desc">
+                {{ summary }}
+            </view>-->
+            <view class="article__desc">
+                <text class="article__time">{{ desc }}</text>
+                <view class="article__count">
+                    <image class="article__icon" src="/image/icon-comt.png"></image>
+                    <text>{{ lll }}</text>
+                    <image class="article__icon" src="/image/icon-priaze.png"></image>
+                    <text>{{ fxl }}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    </navigator>
+</template>
+
+<!--三图模式-->
+<template name="newsStyle3">
+    <navigator url="/pages/news/detail?id={{ id }}&chid={{ chid }}&style={{ style }}&tag={{ tag }}">
+    <view class="article__item">
+        <view class="article__info">
+            <view class="article__title">{{ 4444 }}</view>
+            <view class="article__images">
+                <image class="article__imgview" src="/image/20160919060521492.jpg"></image>
+                <image class="article__imgview" src="/image/20160919060521492.jpg"></image>
+                <image class="article__imgview" src="/image/20160919060521492.jpg"></image>
+            </view>
+            <view class="article__desc">
+                <text class="article__source" wx:if="{{ 444 }}">{{ tag }}</text>
+                <text class="article__time">{{ 4444 }}</text>
+                <view class="article__count">
+                    <image class="article__icon" src="/image/icon-comt.png"></image>
+                    <text>{{ 4444 }}</text>
+                    <image class="article__icon" src="/image/icon-priaze.png"></image>
+                    <text>{{ 4444 }}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    </navigator>
+</template>
